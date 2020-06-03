@@ -8,6 +8,7 @@ phases:
       - aws ecr get-login --region us-east-1  --no-include-email
       - REPOSITORY_URI=313401839503.dkr.ecr.us-east-1.amazonaws.com/test-repo
       - IMAGE_TAG=latest
+      - chmod 777 var/run/docker.sock
   build:
     commands:
       - echo Build started on `date`
